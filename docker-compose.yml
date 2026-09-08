@@ -1,0 +1,71 @@
+services:
+
+  consul:
+    image: hashicorp/consul:latest
+    container_name: consul
+    command: agent -server -bootstrap-expect=1 -ui -client=0.0.0.0
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    networks:
+      - service-network
+
+  service-a:
+    build:
+      context: ./service-a
+    container_name: service-a
+    environment:
+      CONSUL_URL: http://consul:8500
+    ports:
+      - "5001:5001"
+    depends_on:
+      - consul
+    networks:
+      - service-network
+
+  service-b:
+    build:
+      context: ./service-b
+    container_name: service-b
+    environment:
+      CONSUL_URL: http://consul:8500
+    ports:
+      - "5002:5002"
+    depends_on:
+      - consul
+    networks:
+      - service-network
+
+  service-c:
+    build:
+      context: ./service-c
+    container_name: service-c
+    environment:
+      CONSUL_URL: http://consul:8500
+    ports:
+      - "5003:5003"
+    depends_on:
+      - consul
+    networks:
+      - service-network
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+    container_name: api-gateway
+    environment:
+      CONSUL_URL: http://consul:8500
+    ports:
+      - "8080:8080"
+    depends_on:
+      - consul
+      - service-a
+      - service-b
+      - service-c
+    networks:
+      - service-network
+
+
+networks:
+  service-network:
+    driver: bridge
