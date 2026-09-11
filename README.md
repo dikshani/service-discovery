@@ -641,13 +641,13 @@ Recommended screenshots:
 Add screenshots using Markdown:
 
 ``` markdown
-![Consul Services](screenshots/01-consul-services.png)
-![Service A Health](screenshots/02-service-a-health.png)
-![Docker Compose](screenshots/03-docker-compose.png)
-![API Gateway Test](screenshots/04-api-gateway-test.png)
-![Service Failure](screenshots/05-service-b-failure.png)
-![Service Recovery](screenshots/06-service-b-recovery.png)
-![Service Failover](screenshots/07-service-a-failover.png)
+![Consul Services](screenshot/01-consul-services.png)
+![Service A Health](screenshot/02-service-a-health.png)
+![Docker Compose](screenshot/03-docker-compose.png)
+![API Gateway Test](screenshot/04-api-gateway-test.png)
+![Service Failure](screenshot/05-service-b-failure.png)
+![Service Recovery](screenshot/06-service-b-recovery.png)
+![Service Failover](screenshot/07-service-a-failover.png)
 ```
 
 ------------------------------------------------------------------------
