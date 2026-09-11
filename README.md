@@ -641,7 +641,7 @@ Recommended screenshots:
 Add screenshots using Markdown:
 
 ``` markdown
-![Consul Services](screenshot/01-consul-services.png)
+![Consul Services](./screenshot/01-consul-services.png)
 ![Service A Health](screenshot/02-service-a-health.png)
 ![Docker Compose](screenshot/03-docker-compose.png)
 ![API Gateway Test](screenshot/04-api-gateway-test.png)
