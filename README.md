@@ -638,18 +638,6 @@ Recommended screenshots:
 7.  `07-service-a-failover.png` --- Gateway working through the second
     Service A instance
 
-Add screenshots using Markdown:
-
-``` markdown
-![Consul Services](./screenshot/01-consul-services.png)
-![Service A Health](screenshot/02-service-a-health.png)
-![Docker Compose](screenshot/03-docker-compose.png)
-![API Gateway Test](screenshot/04-api-gateway-test.png)
-![Service Failure](screenshot/05-service-b-failure.png)
-![Service Recovery](screenshot/06-service-b-recovery.png)
-![Service Failover](screenshot/07-service-a-failover.png)
-```
-
 ------------------------------------------------------------------------
 
 ## Limitations of This Demo
@@ -701,8 +689,6 @@ The project also validates that:
 
 ## Screenshots
 
-The project screenshots are stored in the `screenshot/` directory.
-
 ### 1. Consul Services
 
 ![Consul Services](screenshot/01-consul-services.png)
@@ -731,18 +717,18 @@ This screenshot shows the API Gateway health endpoint and responses from Service
 
 ![Service B Failure](screenshot/05-service-b-failure.png)
 
-This screenshot demonstrates Consul detecting Service B as unhealthy after the container is stopped.
+This screenshot shows the Consul detecting Service B as unhealthy after the container is stopped.
 
 ### 6. Service B Recovery
 
 ![Service B Recovery](screenshot/06-service-b-recovery.png)
 
-This screenshot demonstrates Service B becoming healthy again after restarting the container.
+This screenshot shows the Service B becoming healthy again after restarting the container.
 
 ### 7. Service A Failover
 
 ![Service A Failover](screenshot/07-service-a-failover-gateway.png)
 
-This screenshot demonstrates dynamic service discovery and failover through the second Service A instance.
+This screenshot shows the dynamic service discovery and failover through the second Service A instance.
 
-> Note: The directory name is intentionally `screenshot/` because that is the directory currently used in this GitHub repository.
+https://roadmap.sh/projects/service-discovery
